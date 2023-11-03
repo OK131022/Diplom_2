@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Order {
+public class Order implements Ingridients {
     private List<String> ingredients;
 
     public Order(List<String> ingredients) {
@@ -15,8 +15,9 @@ public class Order {
     public Order() {}
 
     public static Order createIngredients() {
-        return new Order(new ArrayList<>(Arrays.asList("61c0c5a71d1f82001bdaaa6d", "61c0c5a71d1f82001bdaaa6f")));
+        return new Order(new ArrayList<>(Arrays.asList(INGRIDIENT1, INGRIDIENT2)));
     }
+
 
     public static Order createIngredientsWithErrorHash() {
         return new Order(new ArrayList<>(Arrays.asList(RandomStringUtils.randomAlphabetic(24), RandomStringUtils.randomAlphabetic(24))));
